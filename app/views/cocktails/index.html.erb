@@ -1,5 +1,6 @@
 <h1> All our cocktails </h1>
 
+<div class ="cards">
 <% @cocktails.each do |cocktail| %>
 <% if cocktail.photo.attached? %>
   <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
@@ -11,8 +12,8 @@
 
 <div class="cards">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    Breakfast
   </div>
+    Breakfast
 
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
     Lunch
