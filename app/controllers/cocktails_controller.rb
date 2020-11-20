@@ -22,6 +22,12 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def destroy
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.delete
+    redirect_to cocktails_path
+  end
+
 
 # A user can see the list of cocktails
 # A user can see the details of a given cocktail, with the dose needed for each ingredient
